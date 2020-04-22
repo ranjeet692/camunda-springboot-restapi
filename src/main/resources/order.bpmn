@@ -11,10 +11,10 @@
       <bpmn:outgoing>Flow_1lo7h8x</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_0snpols" sourceRef="Activity_1iew8qk" targetRef="Gateway_1jz36te" />
-    <bpmn:sequenceFlow id="Flow_1ob7e6j" sourceRef="Gateway_1jz36te" targetRef="Activity_0dn28lh">
+    <bpmn:sequenceFlow id="Flow_1ob7e6j" name="quantity &#60;= 5" sourceRef="Gateway_1jz36te" targetRef="Activity_0dn28lh">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${availableQunatity &gt;= quantity}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_1lo7h8x" sourceRef="Gateway_1jz36te" targetRef="Activity_0vxkzdm">
+    <bpmn:sequenceFlow id="Flow_1lo7h8x" name="quantity &#62; 5" sourceRef="Gateway_1jz36te" targetRef="Activity_0vxkzdm">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${availableQunatity &lt; quantity}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:endEvent id="Event_1wnmbon">
@@ -86,11 +86,17 @@
         <di:waypoint x="450" y="335" />
         <di:waypoint x="450" y="410" />
         <di:waypoint x="560" y="410" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="391" y="370" width="58" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ob7e6j_di" bpmnElement="Flow_1ob7e6j">
         <di:waypoint x="450" y="285" />
         <di:waypoint x="450" y="210" />
         <di:waypoint x="560" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="378" y="245" width="64" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0snpols_di" bpmnElement="Flow_0snpols">
         <di:waypoint x="340" y="310" />
