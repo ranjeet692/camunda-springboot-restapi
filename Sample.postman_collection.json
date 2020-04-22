@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "bce23a25-f3d8-4a9a-99dd-e2b65f91b257",
+		"name": "Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order Workflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"variables\":{\n\t\t\"emailId\":{\n\t\t\t\"value\":\"ranjeetkumar692@gmail.com\",\n\t\t\t\"type\":\"String\"\n\t\t},\n\t\t\"quantity\":{\n\t\t\t\"value\":4,\n\t\t\t\"type\":\"Integer\"\n\t\t},\n\t\t\"price\":{\n\t\t\t\"value\":100.50,\n\t\t\t\"type\":\"Double\"\n\t\t},\n\t\t\"productId\":{\n\t\t\t\"value\":\"03778dd5-27d9-4b76-bc15-057e7bf44b19\",\n\t\t\t\"type\":\"String\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-definition/key/orderworkflow/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"orderworkflow",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring-Boot-Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\":\"1234\",\n\t\"quantity\":4,\n\t\"price\":100.50,\n\t\"emailId\":\"ranjeetkumar692@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
